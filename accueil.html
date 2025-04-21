@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #333;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .nav-link {
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #999;
+    }
+    .competence-button {
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      transition: background-color 0.5s ease, border-color 0.5s ease;
+      background-size: cover;
+      background-position: center;
+    }
+    .css3-button {
+      background-image: url('images/css 3.png');
+    }
+    .competence-button:hover {
+      background-color: rgba(224, 224, 224, 0.8);
+      border-color: #999;
+    }
+  </style>
+</head>
+<body class="bg-white text-black">
+
+  <!-- Barre de navigation -->
+  <header class="flex justify-between items-center p-4">
+    <div class="text-4xl font-light tracking-wide">PASCAL <span class="font-thin">BOULOUDI</span></div>
+    <nav class="space-x-4 text-sm">
+      <a href="projets.html" class="nav-link hover:underline">PROJET</a>
+      <a href="contact.html" class="nav-link hover:underline">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Section principale -->
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 py-4">
+    
+    <!-- À propos -->
+    <a href="a_propos.html" class="block">
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow">
+        <div class="swiper mySwiperApropos h-80">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/apropos1.jpg" class="w-full h-full object-cover" alt="À propos 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/apropos2.jpg" class="w5/-10 h-full object-cover translate-y-10" alt="À propos 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/apropos3.jpg" class="w-full h-full object-cover" alt="À propos 3" />
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="p-1 text-xl font-semibold">À PROPOS</div>
+      </div>
+    </a>
+
+    <!-- Carrousel Compétences -->
+    <div class="bg-blue-100 rounded-xl overflow-hidden shadow">
+      <a href="competences.html" class="block">
+        <div class="p-4 text-xl font-semibold">COMPÉTENCES</div>
+      </a>
+      <div class="swiper mySwiper h-80">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="images/html 5.png" class="w-full h-full object-cover" alt="HTML5" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="images/css 3.png" class="w-full h-full object-cover" alt="CSS3" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="images/accessibilité.jpeg" class="w-full h-full object-cover" alt="Accessibilité" />
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="images/javascript.jpeg" class="w-full h-full object-cover" alt="JavaScript" />
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img src="images/outilsdedéveloppement.jpeg" class="w-full h-full object-cover" alt="Outils de développement" />
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img src="images/responsivedesign.jpeg" class="w-full h-full object-cover" alt="Responsive Design" />
+          </div>
+          <!-- Slide 11 -->
+          <div class="swiper-slide">
+            <img src="images/excel.png" class="w-full h-full object-cover" alt="Excel" />
+          </div>
+          <!-- Slide 12 -->
+          <div class="swiper-slide">
+            <img src="images/word.png" class="w-full h-full object-cover" alt="Word" />
+          </div>
+          <!-- Slide 13 -->
+          <div class="swiper-slide">
+            <img src="images/powerpoint.png" class="w-full h-full object-cover" alt="PowerPoint" />
+          </div>
+          <!-- Slide 14 -->
+          <div class="swiper-slide">
+            <img src="images/infographie.jpeg" class="w-full h-full object-cover" alt="Infographie" />
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-2"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
+    const swiperApropos = new Swiper('.mySwiperApropos', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+</html>

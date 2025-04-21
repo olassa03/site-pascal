@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .competence-button {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        .html5-button {
+            background-image: url('images/html 5.png');
+        }
+        .css3-button {
+            background-image: url('images/css 3.png');
+        }
+        .competence-button:hover {
+            background-color: rgba(224, 224, 224, 0.8);
+            border-color: #999;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .accessibilite-button {
+            background-image: url('images/accessibilité.jpeg');
+        }
+        .javascript-button {
+            background-image: url('images/javascript.jpeg');
+        }
+        .outils-button {
+            background-image: url('images/outilsdedéveloppement.jpeg');
+        }
+        .responsive-button {
+            background-image: url('images/responsivedesign.jpeg');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mes Compétences</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+            <li><a href="competences.html" class="active">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="px-6 py-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Mes Compétences en Informatique</h2>
+        <h3 class="text-xl text-center mb-8">Compétences Techniques</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Compétence 1 -->
+            <div class="competence-button html5-button">
+                <h4 class="text-xl font-semibold">HTML5</h4>
+                <p>Création de pages web structurées et sémantiques</p>
+            </div>
+            <!-- Compétence 2 -->
+            <div class="competence-button css3-button">
+                <h4 class="text-xl font-semibold">CSS3</h4>
+                <p>Mise en forme avancée, animations et transitions</p>
+            </div>
+            <!-- Compétence 3 -->
+            <div class="competence-button javascript-button">
+                <h4 class="text-xl font-semibold">JavaScript</h4>
+                <p>Notions de base, manipulation du DOM et événements</p>
+            </div>
+            <!-- Compétence 4 -->
+            <div class="competence-button responsive-button">
+                <h4 class="text-xl font-semibold">Responsive Design</h4>
+                <p>Utilisation de Flexbox et Grid pour des mises en page adaptatives</p>
+            </div>
+            <!-- Compétence 5 -->
+            <div class="competence-button outils-button">
+                <h4 class="text-xl font-semibold">Outils de développement</h4>
+                <p>Utilisation de Chrome DevTools et de systèmes de contrôle de version (Git)</p>
+            </div>
+            <!-- Compétence 6 -->
+            <div class="competence-button accessibilite-button">
+                <h4 class="text-xl font-semibold">Accessibilité</h4>
+                <p>Principes de base pour rendre les sites accessibles à tous</p>
+            </div>
+            <!-- Nouvelles compétences -->
+            <div class="competence-button" style="background-image: url('images/excel.png');">
+                <h4 class="text-xl font-semibold">Excel</h4>
+                <p>Analyse de données et automatisation avec Excel</p>
+            </div>
+            <div class="competence-button" style="background-image: url('images/word.png');">
+                <h4 class="text-xl font-semibold">Word</h4>
+                <p>Création de documents professionnels avec Word</p>
+            </div>
+            <div class="competence-button" style="background-image: url('images/powerpoint.png');">
+                <h4 class="text-xl font-semibold">PowerPoint</h4>
+                <p>Conception de présentations dynamiques avec PowerPoint</p>
+            </div>
+            <div class="competence-button" style="background-image: url('images/infographie.jpeg');">
+                <h4 class="text-xl font-semibold">Infographie</h4>
+                <p>Création de visuels attrayants et informatifs</p>
+            </div>
+        </div>
+    </section>
+   
+    <script src="script.js"></script>
+</body>
+</html> 
